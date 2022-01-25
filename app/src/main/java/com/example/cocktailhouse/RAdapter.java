@@ -55,7 +55,7 @@ public class RAdapter extends RecyclerView.Adapter<RAdapter.viewHolder> {
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.riview);
+
             textView = itemView.findViewById(R.id.rtview);
 
         }

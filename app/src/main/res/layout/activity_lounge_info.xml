@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoungeInfo"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="?colorPrimary">
 
 
 
@@ -21,11 +22,70 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="200dp"
+            android:src="@drawable/blueprint"
+            android:padding="10dp"
+
+            android:scaleType="fitCenter"/>
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="70dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginRight="9dp"
+                        android:src="@drawable/b2"
+                        android:scaleType="centerCrop"
+                        />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginRight="9dp"
+                        android:src="@drawable/b2"
+                        android:scaleType="centerCrop"
+                        /><ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="9dp"
+                    android:src="@drawable/b2"
+                    android:scaleType="centerCrop"
+                    />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginRight="9dp"
+                        android:src="@drawable/b2"
+                        android:scaleType="centerCrop"
+                        />
+
+
+
+
+
+
+
+
+                </LinearLayout>
 
             </ScrollView>
 
@@ -33,6 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="MENU"
+                android:layout_marginLeft="10dp"
                 android:textSize="16sp"
                 android:textStyle="bold|normal"
                 android:fontFamily="@font/autour_one"
@@ -41,7 +102,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"/>
 
         </LinearLayout>
 
