@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_lounge_info.xml" value="0.128" />
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_lounges.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_sidebar.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/foor_item.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/headerfile.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/ASUS/Desktop/Recyclerview/cocktailhouse/app/src/main/res/layout/item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/drawable/btn_corner5.xml" value="0.1" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/drawable/ic_google.xml" value="0.1" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/drawable/mainbtn.xml" value="0.1" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/drawable/round_bgwhite.xml" value="0.1" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_blank_acc.xml" value="0.25" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/layout/item.xml" value="0.264" />
+        <entry key="..\:/Users/vivek/Desktop/CockTailHouse/Recyclerview/cocktailhouse/app/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="..\:/Users/vivek/Downloads/cocktailhouse/app/src/main/res/drawable/button_all.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/vivek/Downloads/cocktailhouse/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/vivek/Downloads/cocktailhouse/app/src/main/res/layout/activity_sidebar.xml" value="0.1" />
+        <entry key="..\:/Users/vivek/Downloads/cocktailhouse/app/src/main/res/layout/item.xml" value="0.3222591362126246" />
+        <entry key="..\:/Users/vivek/Downloads/cocktailhouse/app/src/main/res/menu/menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

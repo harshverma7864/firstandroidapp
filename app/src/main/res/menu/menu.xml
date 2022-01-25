@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/h"
+        android:title="Home" />
+    <item
+        android:icon="@drawable/i"
+        android:title="About" />
+    <item
+        android:icon="@drawable/u"
+        android:title="My Account"
+        />
+    <item
+        android:icon="@drawable/grid"
+        android:title="All Lounges"
+        />
+    <item
+        android:icon="@drawable/bookings"
+        android:title="My Bookings" />
+    <item
+        android:icon="@drawable/l"
+        android:title="Login" />
+    <item
+        android:icon="@drawable/settings"
+        android:title="settings" />
+</menu>

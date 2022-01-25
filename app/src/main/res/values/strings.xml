@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">cocktail house</string>
+    <string name="navigation_close">navigation_close</string>
+    <string name="navigation_open">navigation_open</string>
+</resources>
