@@ -39,6 +39,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
 import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
@@ -52,11 +53,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RecyclerView recyclerView;
     MyAdapter myAdapter;
     DataClass dataClass;
+    ArrayList<LoungeDataClass> jsonMenuArray;
+
     String url="https://winbattleuc.in/fetchdata.php";
+    String menuUrl = "https://winbattleuc.in/fetchmenu.php";
     ProgressBar progressBar;
 
 
     public static ArrayList<DataClass> dataClassArrayList = new ArrayList<>();
+    public static ArrayList<LoungeDataClass> loungeDataClassArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     JSONObject jsonObject = new JSONObject(response);
                     String success = jsonObject.getString("success");
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
+                    JSONArray jsonMenuArray = jsonObject.getJSONArray("menu");
                     if (success.equals("1")) {
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject object = jsonArray.getJSONObject(i);
@@ -129,16 +135,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             String lid = object.getString("lid");
                             String rating = object.getString("rating");
                             String imgurl = object.getString("urltoimage");
-
-
-                            dataClass = new DataClass(sno, lname, location, lid , rating,imgurl);
+                            dataClass  = new DataClass(sno, lname, location, lid , rating,imgurl);
                             dataClassArrayList.add(dataClass);
-
                             myAdapter.notifyDataSetChanged();
                             progressBar.setVisibility(View.GONE);
                         }
 
                     }
+
                 } catch (Exception e) {
 
                 }
@@ -152,7 +156,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
         requestQueue.add(request);
     }
-    
+//
+//    private void getMenu(){
+//        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+//            @Override
+//            public void onResponse(String response) {
+//                dataClassArrayList.clear();
+//                try {
+//                    JSONObject jsonObject = new JSONObject(response);
+//                    String success = jsonObject.getString("success");
+//                    JSONArray jsonMenuArray = jsonObject.getJSONArray("menu");
+//
+////                    if (success.equals("1")) {
+////                        for (int i = 0; i < jsonMenuArray.length(); i++) {
+////                            JSONObject object = jsonArray.getJSONObject(i);
+////
+////                            String sno = object.getString("sno");
+////                            String lname = object.getString("lname");
+////                            String location = object.getString("location");
+////                            String lid = object.getString("lid");
+////                            String rating = object.getString("rating");
+////                            String imgurl = object.getString("urltoimage");
+////                            dataClass  = new DataClass(sno, lname, location, lid , rating,imgurl);
+////                            dataClassArrayList.add(dataClass);
+////                            myAdapter.notifyDataSetChanged();
+////                            progressBar.setVisibility(View.GONE);
+////                        }
+////
+////                    }
+//
+//                } catch (Exception e) {
+//
+//                }
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Toast.makeText(MainActivity.this, error.getMessage()  , Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+//        requestQueue.add(request);
+//    }
+
+
+
+
+
+
+
 
     private void toastfortest(){
         Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();

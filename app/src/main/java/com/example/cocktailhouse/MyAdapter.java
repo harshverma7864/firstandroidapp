@@ -1,9 +1,14 @@
 package com.example.cocktailhouse;
 
+
+import static com.example.cocktailhouse.MainActivity.loungeDataClassArrayList;
+
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,11 +32,15 @@ import java.util.TimerTask;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     Context context;
     List<DataClass> dataClassList;
+    ArrayList<LoungeDataClass> menu;
 
 
-    public MyAdapter(Context context, List<DataClass> dataClassList) {
+
+    public MyAdapter(Context context, List<DataClass> dataClassList ) {
         this.context = context;
         this.dataClassList = dataClassList;
+//        this.menu = jsonMenuArray;
+
     }
 
     @NonNull
@@ -47,7 +58,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.location.setText(dataClassList.get(position).getLocation());
         holder.rating.setText(dataClassList.get(position).getrating());
         String urltoImage = dataClassList.get(position).getimageurl();
-        String loungeId = dataClassList.get(position).getLid();
+        String lid = dataClassList.get(position).getLid();
+
+
 
 
         Glide.with(context)
@@ -57,10 +70,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.parentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "HO GYA RECYCLERVIEW SE " + loungeId, Toast.LENGTH_SHORT).show();
-//                        Intent intent =  new Intent(context, LoungeInfo.class);
-//                        intent.putExtra("lid",loungeId);
-//                        context.startActivity(intent);
+//                Toast.makeText(context, "HO GYA RECYCLERVIEW SE " + loungeId, Toast.LENGTH_SHORT).show();
+                        Intent intent =  new Intent(context, LoungeInfo.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putStringArrayList("menu",menu);
+//                        intent.putExtra("menu", menu);
+                        intent.putExtra("lid",lid);
+//                        intent.putExtras(bundle);
+                        context.startActivity(intent);
 
 
             }
