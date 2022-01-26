@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneAuth">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/phone_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="splash.json" />
+
+    <EditText
+        android:id="@+id/name_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_image"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/edittext"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:padding="14dp"
+        android:textAlignment="center">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/phone_number_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_user"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/edittext"
+        android:hint="Enter Phone Number ..."
+        android:inputType="number"
+        android:padding="14dp"
+        android:textAlignment="center">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/phone_number_verify_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_number_edit"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/edittext"
+        android:hint="Enter Verification Code ..."
+        android:inputType="number"
+        android:padding="14dp"
+        android:textAlignment="center">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/send_verify_code_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_number_verify_code"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/buttons"
+        android:padding="4dp"
+        android:text="Send Verification Code"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_verify_code_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/buttons"
+        android:padding="4dp"
+        android:text="Verify"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp">
+
+    </Button>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/Skip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/buttons"
+        android:padding="4dp"
+        android:text="SKIP ONLY FOR DEV PURPOSE"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp">
+
+    </Button>
+
+</RelativeLayout>

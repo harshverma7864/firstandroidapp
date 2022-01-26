@@ -33,6 +33,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.lounges;
 
 import org.json.JSONArray;
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MyAdapter myAdapter;
     DataClass dataClass;
     ArrayList<LoungeDataClass> jsonMenuArray;
-
+    FirebaseAuth auth;
     String url="https://winbattleuc.in/fetchdata.php";
     String menuUrl = "https://winbattleuc.in/fetchmenu.php";
     ProgressBar progressBar;
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView = findViewById(R.id.listview);
         toolbar = findViewById(R.id.toolbar);
         progressBar = findViewById(R.id.progressbar);
+        auth = FirebaseAuth.getInstance();
         myAdapter = new MyAdapter(this, dataClassArrayList);
         recyclerView.setAdapter(myAdapter);
 //        toolbar.setTitle("Cocktail House");
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LinearLayout ll_lounges = menuView.findViewById(R.id.lounges_n);
         LinearLayout ll_settings = menuView.findViewById(R.id.settings_n);
         LinearLayout ll_login = menuView.findViewById(R.id.login_n);
+        LinearLayout ll_logout = menuView.findViewById(R.id.logout_n);
 
 
         ll_home.setOnClickListener(this);
@@ -103,10 +107,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ll_lounges.setOnClickListener(this);
         ll_settings.setOnClickListener(this);
         ll_login.setOnClickListener(this);
+        ll_logout.setOnClickListener(this);
 
 
         getData();
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser=auth.getCurrentUser();
+        if (currentUser==null)
+        {
+            auth.signOut();
+            SendUserToLoginActivity();
+
+        }
+    }
+
+    private void SendUserToLoginActivity() {
+        Intent intent =new Intent(MainActivity.this, PhoneAuth.class);
+        startActivity(intent);
     }
 
     @Override
@@ -201,7 +223,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+    private void Logout(){
+        Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if(currentUser!=null){
+            auth.signOut();
+            SendUserToLoginActivity();
+        }
 
+    }
 
 
 
@@ -238,6 +268,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.login_n:
                 toastfortest();
+                break;
+
+            case R.id.logout_n:
+                Logout();
                 break;
         }
     }

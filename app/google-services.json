@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "289022352128",
+    "project_id": "cocktailhouse-2a5da",
+    "storage_bucket": "cocktailhouse-2a5da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289022352128:android:59597fb998f2c7f94431e5",
+        "android_client_info": {
+          "package_name": "com.example.cocktailhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289022352128-u7fcv8qgo6136j8g4q8t1ku56lk1cd2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3KMB4PlgE40oom8XhuN1ocBZoV6R4dQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289022352128-u7fcv8qgo6136j8g4q8t1ku56lk1cd2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

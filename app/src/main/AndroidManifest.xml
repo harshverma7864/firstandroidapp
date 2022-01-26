@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CocktailHouse">
         <activity
+            android:name=".PhoneAuth"
+            android:exported="false" />
+        <activity
             android:name=".LoungeInfo"
             android:exported="false" />
         <activity

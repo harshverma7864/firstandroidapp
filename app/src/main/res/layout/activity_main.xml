@@ -11,6 +11,7 @@
 >
 
     <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+        app:background="?colorOnPrimary"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:tag="menu"
